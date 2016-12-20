@@ -1,0 +1,182 @@
+<script type="text/javascript" src="site_media/js/views_js/dia_adicional.js"></script>
+<!-- begin: .tray-center -->
+<div class="tray tray-center animated fadeIn">
+  <div class="mw1000 center-block">
+    <!-- Begin: Content Header -->
+    <div class="content-header">
+    </div>
+    <!-- Begin: Admin Form -->
+    <div class="admin-form">
+      <div class="panel heading-border panel-info">
+        <div class="panel-body bg-light">
+          <form method="post" id="form-ui" class="form-horizontal">
+            <div class="section-divider mb40" id="spy1">
+              <span>Carga Día adicional</span>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <label class="control-label col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                      Cédula:
+                    </label>
+                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12" style="padding-right:0px">
+                      <div class="section">
+                        <div class="smart-widget sm-right smr-50">
+                          <label class="field">
+                            <input type="text" class="gui-input" id="cedula_trabajador" name="cedula_trabajador" onKeyPress="return valida(event,this,10,10)" onBlur="valida2(this,10,10);" placeholder="Ingrese cédula" maxlength="10" >
+                            <input type="hidden" class="form-control" id="id_trabajador" name="id_trabajador">
+                            <input type="hidden" class="form-control" id="estatus_trabajador" name="estatus_trabajador">
+                          </label>
+                          <div id="buscar_trabajador" name="buscar_trabajador" class="button"><i class="fa fa-search" aria-hidden="true"></i></div>
+                       </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <label class="control-label col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    Nombres y  apellidos:
+                    </label>
+                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12" style="padding-right:0px;">
+                      <input type="text" id="nombre_trabajador" name="nombre_trabajador" class="form-control" onKeyPress="return valida(event,this,19,50)" onBlur="valida2(this,19,50);" placeholder="Ingrese nombres del trabajador" maxlength="10">
+                    </div>
+                </div>
+              </div>  
+              <div class="col-lg-12">
+                <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12" style="padding-right:0px;">
+                  <label class="control-label col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                  Cargo:
+                  </label>
+                  <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12" >
+                    <input type="text" id="cargo_trabajador" name="cargo_trabajador" class="form-control" onKeyPress="return valida(event,this,19,50)" onBlur="valida2(this,19,50);" placeholder="Ingrese cargo del trabajador" maxlength="10">
+                  </div>
+                </div>
+                <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12" style="padding-right:0px;">
+                  <label class="control-label col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    Mes:
+                  </label>
+                  <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                    <label class="field select">
+                      <select class="form-control" id="select_mes_he" name="select_mes_he">
+                        <option>--Seleccione --</option>
+                      </select>
+                      <i class="arrow"></i>
+                    </label>  
+                  </div>
+                </div>
+                </div>          
+              </div> 
+              <div class="col-lg-12 hidden" style="padding:0px;">                
+                <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12" style="padding-right:0px">
+                  <label class="control-label col-lg-3 col-md-3 col-sm-12 col-xs-12" >
+                    Motivo:
+                  </label>
+                  <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12" style="">
+                    <input type="text" id="motivo_he" name="motivo_he" class="form-control" onKeyPress="return valida(event,this,19,100)" onBlur="valida2(this,19,100);" placeholder="Ingrese motivo de hora extra" maxlength="100">
+                  </div>
+                </div>
+              </div> 
+              <div class="">
+              <!-- -->
+              <div class="panel-heading">
+                <div class="col-lg-10 col-md-10">
+                    <i class="fa fa-calculator" aria-hidden="true"></i> <span class="titulo_tabla">Calculador de Horas extras</span>
+                </div>
+                <div class="col-lg-2 col-md-2">
+                    <div style="float:right">
+                      <div class="btn btn-success" id="agregar_fecha" name="agregar_fecha" title="Agregar fila">
+                        <i class="fa fa-calendar-plus-o" aria-hidden="true"></i>
+                      </div>
+                      <div class="btn btn-danger" id="quitar_fecha" name="quitar_fecha" title="Quitar fila">
+                        <i class="fa fa-calendar-minus-o" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="panel-body pn">
+                <table class="table table-striped table-hover tabla_detalle" id="" cellspacing="0" width="100%">
+                  <thead>
+                    <tr class="titulo_tabla">
+                      <th class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="text-align:center">#</th>
+                      <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="text-align:center">Fecha</th>
+                      <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="text-align:center">Motivo</th>
+                      <th class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align:center">Lapso</th>
+                      <th class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="text-align:center">Horas Extras</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tbody_he" name="tbody_he">
+                  </tbody>
+                </table>
+              </div>
+              <!-- -->
+              <!--Footter de tabla -->
+               <div class="col-lg-12">
+                  <div class="col-lg-8 col-md-8 hidden-sm hidden-xs "></div>
+                  <div class="col-lg-2 col-md-12 col-xs-6 col-sm-6"><h3>Total de Horas:</h3></div>
+                  <div class="col-lg-2 col-md-12 col-xs-6 col-sm-6" style="text-align:right"><h3><span id="horas_totales">00:00</span></h3></div>
+               </div>
+              <!-- -->  
+              </div>  
+            </div>
+            <div class="col-lg-12">
+              <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12" style="margin-bottom:30px;">
+                    <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 padding0" ;">
+                        <div id="bloque_mensaje" name="bloque_mensaje">
+                            <div id="campo_mensaje" name="campo_mensaje"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                       <div id="btn_guardar_horas_extras" name="btn_guardar_horas_extras" class="btn btn-info " style="float:left;width:100%"><span id="texo_btn_guardar">Guardar</span></div>
+                    </div>
+                    <div class=" col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                      <div id="btn_limpiar" name="btn_limpiar" class="btn btn-danger" style="float:left;width:100%">Limpiar</div>
+                    </div>
+                </div>
+                <input type="hidden" name="id_horas_extras" id="id_horas_extras">
+            </div>
+            <div id="cuerpo_tablas_he" class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+              <!--Tabla de horas extras -->
+              <div class="" id="spy2">
+                <div class="panel-heading">
+                  <div>
+                    <i class="fa fa-calendar-plus-o" aria-hidden="true"></i> Horas extras registradas
+                  </div>
+                </div>
+                <div class="panel-body pn" id="cuerpo_tabla">
+                </div>
+              </div>
+              <!-- -->
+            </div>
+          <div style="clear:both"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- End: Admin Form -->
+  </div>
+</div>
+<!-- end: .tray-center -->
+<!--Bloque modal del sistema -->
+<div class="modal fade" id="modal_mensaje" name="modal_mensaje" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-lg .modal-sm">
+      <div class="modal-content">
+        <div class="modal-header header_conf">
+            <button type="button" id="cerrar_mensaje2" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <p id="cabecera_mensaje" name="cabecera_mensaje"></p>
+        </div>
+        <div class="modal-body" id="cuerpo_mensaje" name="cuerpo_mensaje">
+        <!--Modal body -->
+        <!-- modal body-->
+        </div>  
+        <div class="modal-footer footer_conf">
+            <!-- Footter del modal -->
+              <input type="hidden" class="form-group" maxlength="2" id="id_modal" name="id_modal">
+              <input type="hidden" class="form-group" maxlength="2" id="numero_modal" name="numero_modal">
+              <input type="hidden" class="form-group" maxlength="2" id="mes_modal" name="mes_modal">
+              <button type="button" name="modal_reporte_salir" id="modal_reporte_salir" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+              <button type="button" name="modal_reporte_aceptar" id="modal_reporte_aceptar" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+            <!-- Fin footter del modal -->
+        </div>
+      </div>
+    </div>
+</div>
+<!-- -->  

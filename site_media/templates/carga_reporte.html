@@ -1,0 +1,104 @@
+<script type="text/javascript" src="site_media/js/views_js/carga_reporte.js"></script>
+<!-- begin: .tray-center -->
+<div class="tray tray-center animated fadeIn">
+  <div class="mw1000 center-block">
+    <!-- Begin: Content Header -->
+    <div class="content-header">
+    </div>
+    <!-- Begin: Admin Form -->
+    <div class="admin-form">
+      <div class="panel heading-border panel-info">
+        <div class="panel-body bg-light">
+          <form method="post" id="form-imprimir-reporte" name="form-imprimir-reporte" class="form-horizontal">
+            <div class="section-divider mb40" id="spy1">
+              <span>Reportes: Horas extras detalle</span>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                  <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12" style="padding-right: 0px;">
+                      <label class="control-label col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        Desde:
+                      </label>
+                      <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                          <label for="fecha_desde" class="field prepend-picker-icon" title="Fecha desde" style="color:#3498db">
+                            <input type="text" id="fecha_desde" name="fecha_desde" class="gui-input fecha_fila" placeholder="dd/mm/aaaa" onchange="" readonly>
+                          </label>
+                      </div>
+                  </div>
+                  <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <label class="control-label col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        Hasta:
+                      </label>
+                      <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12" style="padding-right:0px;">
+                          <label for="fecha_hasta" class="field prepend-picker-icon" title="Fecha hasta" style="color:#3498db">
+                            <input type="text" id="fecha_hasta" name="fecha_hasta" class="gui-input fecha_fila" placeholder="dd/mm/aaaa" onchange="" readonly>
+                          </label>
+                      </div>
+                  </div>
+                </div>  
+                <div class="col-lg-12">
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <label class=" control-label col-lg-3 col-md-3 col-sm-12 col-xs-12" style="padding:0px;">
+                         Departamentos: 
+                      </label>
+                      <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12" style="padding-left: 0px;">
+                        <label class="field select">
+                          <select class="form-control" id="select_dptos" name="select_dptos">
+                          </select>
+                          <i class="arrow"></i>
+                        </label>
+                      </div>  
+                  </div>
+                </div>          
+            </div>
+          </form>   
+        </div>
+        <div class="col-lg-12">
+          <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12" style="margin-bottom:30px;">
+                <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 padding0" ;">
+                    <div id="bloque_mensaje" name="bloque_mensaje">
+                        <div id="campo_mensaje" name="campo_mensaje"></div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                   <div id="btn_imprimir" name="btn_imprimir" class="btn btn-info " style="float:left;width:100%"><span id="texo_btn_imprimir">Imprimir</span></div>
+                </div>
+                <div class=" col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                  <div id="btn_limpiar" name="btn_limpiar" class="btn btn-danger" style="float:left;width:100%">Limpiar</div>
+                </div>
+          </div>
+          <input type="hidden" name="id_horas_extras" id="id_horas_extras">
+        </div>
+        <div style="clear:both"></div>
+          
+      </div>
+    </div>
+  </div>
+    <!-- End: Admin Form -->
+</div>
+<!-- end: .tray-center -->
+<!--Bloque modal del sistema -->
+<div class="modal fade" id="modal_mensaje" name="modal_mensaje" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-lg .modal-sm">
+      <div class="modal-content">
+        <div class="modal-header header_conf">
+            <button type="button" id="cerrar_mensaje2" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <p id="cabecera_mensaje" name="cabecera_mensaje"></p>
+        </div>
+        <div class="modal-body" id="cuerpo_mensaje" name="cuerpo_mensaje">
+        <!--Modal body -->
+        <!-- modal body-->
+        </div>  
+        <div class="modal-footer footer_conf">
+            <!-- Footter del modal -->
+              <input type="hidden" class="form-group" maxlength="2" id="id_modal" name="id_modal">
+              <input type="hidden" class="form-group" maxlength="2" id="numero_modal" name="numero_modal">
+              <input type="hidden" class="form-group" maxlength="2" id="mes_modal" name="mes_modal">
+              <button type="button" name="modal_reporte_salir" id="modal_reporte_salir" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+              <button type="button" name="modal_reporte_aceptar" id="modal_reporte_aceptar" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+            <!-- Fin footter del modal -->
+        </div>
+      </div>
+    </div>
+</div>
+<!-- -->  

@@ -1,0 +1,148 @@
+#contenido_inicial{
+  padding-top: 35px;
+}
+.ocultar
+{
+  display: none;
+}
+.padding0
+{
+  padding:0px;
+}
+.clear
+{
+  clear:both
+}
+.left
+{
+  float:left;
+}
+.right
+{
+  float:right;
+}
+.btn-fff
+{
+  background: #fff; border:1px solid #ccc;
+}
+.n_btn
+{
+	padding: 4px;
+	float: right;
+}
+.titulo_tabla
+{
+   font-size:12pt;
+}
+
+.mostrar
+{
+	display: block;
+}
+.activo_top{
+  background-color: #909090;
+}
+#cuerpo_principal
+{
+  max-height: 300px;
+  overflow-y:hidden;
+}
+.img_ppal
+{
+  margin: 0 auto;
+  display: inherit;
+  width:10%;
+}
+.texto_fila1, .texto_fila2{
+  text-align: center;
+}
+.cuerpo_ini
+{
+  margin-top: 50px;
+}
+.cuerpo_ini_is
+{
+  /*padding: 10% 35% 0% 35%;*/
+  width: 30%;
+  margin: auto;
+  padding-top: 80px;
+  background:url('../img/fondo.png');
+}
+/* demo styles -summernote */
+.btn-toolbar > .btn-group.note-fontname {
+  display: none;
+}
+.red{
+  margin-bottom: 20px;
+}
+.tabla_detalle{
+  cursor: pointer;
+}
+.titulo_th{
+  font-weight: bold;
+}
+#preview_material_multimedia{
+  padding: 20px;
+
+}
+#campo_mensaje2{
+  margin-top: 60px;
+}
+#img_destino,#img_destino_noticias{
+  width: 200px;
+  height: 150px;
+  padding: 2%; 
+}
+.cuerpo_contenido{
+  margin-left: 10px;
+}
+#icono_principal{
+  background-color: #fff;
+}
+.padding0{
+  padding:0px;
+}
+.options-circles-area:active{border:4px solid #1abc9c;}
+.options-circles{width:90px; height:90px; background-color:gray; border-radius: 50%; cursor: pointer; -webkit-box-sizing:border-box; text-align: center; margin-bottom: 30px;}
+.logo{font-size: 40pt;margin-top: 18px;color: #fff;}
+
+.alineado-left{
+  text-align: left;
+}
+.titulo_tabla_panel{
+  font-weight: bold;
+}
+#cuerpo_tablas_he{
+  padding:3%;
+}
+#cuerpo_mensaje_val{
+  max-height: 300px;
+  overflow-x: hidden;
+}
+.btn-alerta{
+  padding: 3%;
+  font-size: 10pt;
+}
+.invisible{
+  display: none;
+}
+.visible{
+  display: block;
+}
+.text-rezise{
+  resize: none;
+}
+/*-- --*/
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../site_media/fonts/glyphicons/glyphicons-halflings-regular.eot');
+  src: url('../site_media/fonts/glyphicons/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+/*-- --*/
+/*-- Cuerpo MediaQuery--*/
+@media(max-width:610px){
+  .cuerpo_ini_is{
+    width:80%;
+  }
+} 
+/*-- --*/

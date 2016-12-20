@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <title>DEM-RRHH</title>
+  <meta name="keywords" content="Manejador de contenido" />
+  <meta name="description" content="AbsoluteAdmin - A Responsive HTML5 Admin UI Framework">
+  <meta name="author" content="AbsoluteAdmin/gsantucci-github:santu1987">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="site_media/img/favicon.ico" />
+  <!--- BLOQUE DE CSS -->
+  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
+  <link rel="stylesheet" type="text/css" href="site_media/css/theme.css">
+  <link rel="stylesheet" type="text/css" href="site_media/css/admin-forms.css">
+  <link rel="stylesheet" type="text/css" href="site_media/css/main.css">
+  <link rel="stylesheet" type="text/css" href="site_media/css/index.css">
+  <link rel="stylesheet" type="text/css" href="site_media/css/bootstrap-select.css">
+  <link href="site_media/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="site_media/img/dem-favicon_0.png">
+  <!-- Datatables CSS -->
+  <link rel="stylesheet" type="text/css" href="site_media/plugins/datatable/css/dataTables.bootstrap.css">
+  <!-- Datatables Editor Addon CSS -->
+  <link rel="stylesheet" type="text/css" href="site_media/plugins/datatable/css/dataTables.editor.css">
+  <!-- Datatables ColReorder Addon CSS -->
+  <link rel="stylesheet" type="text/css" href="site_media/plugins/datatable/css/dataTables.colReorder.min.css">
+</head>
+<body class="admin-elements-page" data-spy="scroll" data-target="#nav-spy" data-offset="300">
+  <!-- Start: Main -->
+  <div id="main">
+    <!-- Start: Header -->
+    <header class="navbar navbar-fixed-top navbar-shadow bg-info">
+      <div class="navbar-branding">
+        <a class="navbar-brand" href="" id="titulo_is">
+          <b>DEM</b><span>-RRHH Horas Extras</span>
+        </a>
+      </div>
+      <ul class="nav navbar-nav navbar-left">
+      </ul>
+    </header>
+    <!-- End: Header -->
+    <!--Cuerpo de formularios -->
+    <section id="">
+    	<section id="content" class="table-layout">
+    		<div id="cuerpo_principal" name="cuerpo_principal">
+        <!-- -->
+        <div class="cuerpo_ini_is">
+          <form id="form_is" name="form_is" method="post" target="_self">
+          <!-- -->
+            <div class="admin-form bg-primary dark">
+              <div class="panel heading-border  panel-info">
+                <div class="panel-body bg-light">
+                  <form method="post" id="form-ui" class="form-horizontal">
+                    <div class="section-divider mb40" id="spy1">
+                      <span>Inicio de Sessi&oacute;n</span>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-lg-12">
+                          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding0">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding0">
+                                  <input type="text" name="login_us" id="login_us" class="form-control" placeholder="Login" onKeyPress="return valida(event,this,0,20)" onBlur="valida2(this,0,20);" maxlenght="11" onpaste="return false">
+                                </div>
+                          </div>
+                        </div>
+                        <div class="form-group col-lg-12">
+                          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding0">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding0">
+                                  <input type="password" name="pass_us" id="pass_us" class="form-control" placeholder="Password" onpaste="return false">
+                                </div>
+                          </div>
+                        </div>
+                        <div class="">
+                          <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                              <div id="btn_iniciar_session" name="btn_iniciar_sesion" class="btn btn-info " style="float:left;width:100%">Iniciar</div>
+                          </div>
+                          <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12" style="margin-top: 10px;">
+                            <div id="bloque_mensaje" name="bloque_mensaje">
+                                <div id="campo_mensaje" name="campo_mensaje"></div>
+                            </div>
+                          </div>
+                        </div>     
+                    </div>            
+                  </form>
+                </div>
+              </div>
+            </div>
+          <!-- -->  
+          </form>
+        </div>
+        <!-- -->  
+        </div>
+    	</section>
+    </section>
+    <!-- -->
+
+  </div>
+  <!-- End: Main -->
+  <!-- BEGIN: PAGE SCRIPTS -->
+  <!-- jQuery -->
+  <script src="site_media/js/jquery-1.9.1.min.js"></script>
+  <script src="site_media/js/jquery-ui.min.js"></script>
+  <script src="site_media/js/jquery-migrate-1.1.0.min.js"></script>
+  <script src="site_media/js/bootstrap-select.min.js"></script>
+  <!-- Theme Javascript -->
+  <script src="site_media/js/libs_template/utility.js"></script>
+  <script src="site_media/js/libs_template/demo.js"></script>
+  <script src="site_media/js/libs_template/main.js"></script>
+  <script src="site_media/js/principal.js"></script>
+  <script src="site_media/js/fbasic.js"></script>
+  <!-- END: PAGE SCRIPTS -->
+  <!--DATA TABLES-->
+  <!-- Datatables -->
+  <script src="site_media/plugins/datatable/js/jquery.dataTables.js"></script>
+  <!-- Datatables Tabletools addon -->
+  <script src="site_media/plugins/datatable/js/dataTables.tableTools.min.js"></script>
+  <!-- Datatables ColReorder addon -->
+  <script src="site_media/plugins/datatable/js/dataTables.colReorder.min.js"></script>
+  <!-- Datatables Bootstrap Modifications  -->
+  <script src="site_media/plugins/datatable/js/dataTables.bootstrap.js"></script>
+  <!-- -->
+  <!-- VIEWS-JS --> 
+  <script src="site_media/js/views_js/inicio_session.js"></script>
+  <!-- -->
+</body>
+</html>

@@ -1,0 +1,68 @@
+<script type="text/javascript" src="site_media/js/views_js/usuarios_permisos.js"></script>
+<!-- begin: .tray-center -->
+<div class="tray tray-center animated fadeIn">
+  <div class="mw1000 center-block">
+    <!-- Begin: Content Header -->
+    <div class="content-header">
+    </div>
+    <!-- Begin: Admin Form -->
+    <div class="admin-form">
+      <div class="panel heading-border panel-info">
+        <div class="panel-body bg-light">
+          <form method="post" id="form-ui" class="form-horizontal">
+            <div class="section-divider mb40" id="spy1">
+              <span>Usuarios Permisos</span>
+            </div>
+            <div class="row">
+                <div class="form-group col-lg-12">
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Usuarios:</div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding0">
+                          <select id="select_usuario" name="select_usuario" class="form-control" data-style="btn-fff" data-live-search="true" title="Seleccione un usuario">
+                          </select>
+                        </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Pantallas:</div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding0">
+                          <select id="select_pantallas" name="select_pantallas" class="form-control" data-style="btn-fff" data-live-search="true" title="Seleccione una pantalla">
+                          </select>
+                        </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Estatus:</div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding0">
+                          <select id="select_estatus" name="select_estatus" class="form-control" data-style="btn-fff" data-live-search="true" title="Seleccione un estatus">
+                            <option value="0">--Seleccione un estatus --</option>
+                            <option value="1">Activo</option>
+                            <option value="2">Inactivo</option>
+                          </select>
+                        </div>
+                  </div>
+                </div>
+                <input type="hidden" name="id_us_permiso" id="id_us_permiso">
+                <div class="">
+                  <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                        <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 padding0">
+                            <div id="bloque_mensaje" name="bloque_mensaje">
+                                <div id="campo_mensaje" name="campo_mensaje"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                           <div id="btn_guardar_us_permiso" name="btn_guardar_us_permiso" class="btn btn-info " style="float:left;width:100%"><span id="texo_btn_guardar">Guardar</span></div>
+                        </div>
+                        <div class=" col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                          <div id="btn_limpiar_permisos" name="btn_limpiar_permisos" class="btn btn-danger" style="float:left;width:100%">Limpiar</div>
+                        </div>
+                    </div>
+                    <input type="hidden" name="id_us_permisos" id="id_us_permisos">
+                </div>
+            </div>            
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- End: Admin Form -->
+  </div>
+</div>
+<!-- end: .tray-center -->

@@ -1,0 +1,48 @@
+<tr id='cuerpo_horas_extras{valore}' data='' class='fila_he'>
+	<td><div class="section"><div name='numero_fecha' id='numero_fecha'style='text-align:center' >{valore}</div></div>
+	<td>
+		<div class="section">
+	        <label for="fecha_he{valore}" class="field prepend-picker-icon" title="Día a registrar" style="color:#3498db">
+	          <input type="text" id="fecha_he{valore}" name="fecha_he{valore}" class="gui-input fecha_fila" placeholder="dd/mm/aaaa" onchange="activar_fecha({valore})" readonly>
+	        </label>
+	    </div>		
+	</td>
+	<td>
+		<div class="section">
+			<textarea name="motivo{valore}" id="motivo{valore}" class="gui-input text-rezise" placeholder="Ingrese Motivo"></textarea>
+		</div>
+	</td>
+	<td>
+		<div class='col-lg-12'>
+			<div class='col-lg-6 col-sm-6 col-xs-6'>
+				<div class="section">
+			        <label for="hora_ini{valore}" class="input-group bootstrap-timepicker timepicker" title="Inicio hora extra">
+			          <span class="input-group-addon disabled">
+			            <i class="fa fa-hourglass-start"></i>
+			          </span>
+			          <input type="text" id="hora_ini{valore}" name="hora_ini{valore}" class="gui-input" placeholder="00:00" onchange="tiempo_transcurrido({valore});cambio_hora({valore})" readonly="readonly">
+			        </label>
+			    </div>
+			</div>					
+			<div class='col-lg-6 col-sm-6 col-xs-6'>
+				<div class="section">
+			        <label for="hora_fin{valore}" class="input-group bootstrap-timepicker timepicker" title="Fin hora extra">
+			          <span class="input-group-addon disabled">
+			            <i class="fa fa-hourglass-end"></i>
+			          </span>
+			          <input type="text" id="hora_fin{valore}" name="hora_fin{valore}" class="gui-input" placeholder="00:00" onchange="tiempo_transcurrido({valore})" readonly="readonly">
+			        </label>
+			    </div>
+			</div>
+		</div>
+	</td>
+	<td style="padding:0px;">
+		<div class="section">
+          	<div class="smart-widget">
+            	<label class="field">
+					<input type='text' name='cantidad_he{valore}' id='cantidad_he{valore}' class='form-control cantidad_horas' style="text-align: right;" value='' placeholder="00:00" readonly>
+				</label>
+			</div>
+		</div>			
+	</td>
+</tr>

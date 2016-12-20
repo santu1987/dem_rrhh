@@ -1,0 +1,188 @@
+<div class="tray tray-center animated fadeIn">
+  <div class="mw1000 center-block">
+    <!-- Begin: Content Header -->
+    <div class="content-header">
+    </div>
+    <!-- Begin: Admin Form -->
+    <div class="admin-form">
+      <div class="">
+        <div class="">
+          <form method="post" id="form-ui" class="form-horizontal">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <label class="control-label col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                      Cédula:
+                    </label>
+                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12" style="padding-right:0px">
+                      <div class="section">
+                        <div class="smart-widget sm-right smr-50">
+                          <label class="field">
+                            <input type="text" class="gui-input" id="cedula_trabajador" name="cedula_trabajador" onKeyPress="return valida(event,this,10,10)" onBlur="valida2(this,10,10);" placeholder="Ingrese cédula" maxlength="10" readonly value="{cedula_trabajador}">
+                            <input type="hidden" class="form-control" id="id_trabajador" name="id_trabajador">
+                            <input type="hidden" class="form-control" id="estatus_trabajador" name="estatus_trabajador">
+                          </label>
+                          <div id="buscar_trabajador" name="buscar_trabajador" class="button"><i class="fa fa-search" aria-hidden="true"></i></div>
+                       </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <label class="control-label col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    Nombres y  apellidos:
+                    </label>
+                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12" style="padding-right:0px;">
+                      <input type="text" id="nombre_trabajador" name="nombre_trabajador" class="form-control" onKeyPress="return valida(event,this,19,50)" onBlur="valida2(this,19,50);" placeholder="Ingrese nombres del trabajador" maxlength="10" value="{nombre_trabajador}" reaonly>
+                    </div>
+                </div>
+              </div>  
+              <div class="col-lg-12">
+                <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12" style="padding-right:0px;">
+                  <label class="control-label col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                  Cargo:
+                  </label>
+                  <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12" >
+                    <input type="text" id="cargo_trabajador" name="cargo_trabajador" class="form-control" onKeyPress="return valida(event,this,19,50)" onBlur="valida2(this,19,50);" placeholder="Ingrese cargo del trabajador" maxlength="10" value="{cargo_trabajador}">
+                  </div>
+                </div>
+                <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12" style="padding-right:0px;">
+                  <label class="control-label col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    Mes:
+                  </label>
+                  <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                    <label class="field select">
+                       <input type="text" id="mes_trabajador" name="mes_trabajador" class="form-control" maxlength="10" value="{mes_trabajador}">
+                      <i class="arrow"></i>
+                    </label>  
+                  </div>
+                </div>
+                </div>          
+              </div> 
+              <div class="col-lg-12" style="padding:0px;">                
+                <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12" style="padding-right:0px">
+                  <label class="control-label col-lg-3 col-md-3 col-sm-12 col-xs-12" >
+                    Motivo:
+                  </label>
+                  <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12" style="">
+                    <input type="text" id="motivo_he" name="motivo_he" class="form-control" onKeyPress="return valida(event,this,19,100)" onBlur="valida2(this,19,100);" placeholder="Ingrese motivo de hora extra" maxlength="100" value="{motivo_he}">
+                  </div>
+                </div> 
+                <div class="form-group col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                    <label class="control-label col-lg-3 col-md-3 col-sm-12 col-xs-12" style="">
+                      Tipo horas:
+                    </label>
+                    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    <!-- -->
+                      <div class="{opcion_sol}"> 
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 " style="padding:0px;">
+                           <label id="texto_diurno" class=" control-label">Diurnas</label>
+                        </div>   
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                           <div id="sol" class="btn btn-primary"><i class="fa fa-sun-o" aria-hidden="true"></i></div>
+                        </div>
+                      </div>
+                    <!-- -->
+                      <div class="{opcion_luna}">  
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 {opcion_luna}" style="padding:0px;"> 
+                          <label id="texto_nocturno" class="col-lg-8 col-md-8 col-sm-6 col-xs-6 control-label" style="margin-right: 10px;">Nocturnas</label>
+                        </div>  
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                          <div id="luna" class="btn btn-primary"><i class="fa fa-moon-o" aria-hidden="true"></i></div>
+                        </div>
+                      </div>
+                    <!-- -->
+                    <!-- -->
+                    <div class="{opcion_dia}">  
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 {opcion_dia}" style="padding:0px;"> 
+                          <label id="texto_nocturno" class="col-lg-8 col-md-8 col-sm-6 col-xs-6 control-label" style="margin-right: 10px;">Día Adicional</label>
+                        </div>  
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                          <div id="luna" class="btn btn-primary"><i class="fa fa-calendar-check-o" aria-hidden="true"></i></div>
+                        </div>
+                    </div>
+                    <!-- -->   
+                    </div>
+                </div> 
+              </div> 
+              <div class="">
+              <!-- -->
+              <div class="panel-heading">
+                <div class="col-lg-10 col-md-10">
+                    <i class="fa fa-calculator" aria-hidden="true"></i> <span class="titulo_tabla">Calculador de Horas extras</span>
+                </div>
+                <div class="col-lg-2 col-md-2">
+                    <div style="float:right">
+                    </div>
+                </div>
+              </div>
+              <div class="panel-body pn">
+                <table class="table table-striped table-hover tabla_detalle" id="" cellspacing="0" width="100%">
+                  <thead>
+                    <tr class="titulo_tabla">
+                      <th class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="text-align:center">#</th>
+                      <th class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align:center">Fecha</th>
+                      <th class="col-lg-5 col-md-5 col-sm-5 col-xs-5" style="text-align:center">Lapso</th>
+                      <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="text-align:center">Horas Extras</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tbody_he" name="tbody_he">
+                  <!--row_horas_extras_lista-->
+                  <tr id='cuerpo_horas_extras{i}' data='' class='fila_he'>
+                  <td><div class="section"><div name='numero_fecha' id='numero_fecha'style='text-align:center' >{i}</div></div>
+                  <td>
+                    <div class="section" style="text-align:center">
+                          <label title="Día a registrar">
+                            {fecha_he}
+                          </label>
+                      </div>    
+                  </td>
+                  <td>
+                    <div class='col-lg-12'>
+                      <div class='col-lg-6 col-sm-6 col-xs-6'>
+                        <div class="section" style="text-align:center">
+                              <label title="Inicio hora extra">
+                                {hora_he_ini}
+                              </label>
+                          </div>
+                      </div>          
+                      <div class='col-lg-6 col-sm-6 col-xs-6'>
+                        <div class="section" style="text-align:center">
+                              <label title="Fin hora extra">
+                               {hora_he_fin}
+                              </label>
+                          </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="section" style="text-align:center">
+                            <div class="smart-widget">
+                              <label class="field">
+                          {cantidad_he}
+                        </label>
+                      </div>
+                    </div>      
+                  </td>
+                </tr>
+                <!--row_horas_extras_lista-->
+                </tbody>
+                </table>
+              </div>
+              <!-- -->
+              <!--Footter de tabla -->
+               <div class="col-lg-12">
+                  <div class="col-lg-8 col-md-8 hidden-sm hidden-xs "></div>
+                  <div class="col-lg-2 col-md-12 col-xs-6 col-sm-6"><h3>Total de Horas:</h3></div>
+                  <div class="col-lg-2 col-md-12 col-xs-6 col-sm-6" style="text-align:right"><h3><span id="horas_totales">{total_horas}</span></h3></div>
+               </div>
+              <!-- -->  
+              </div>  
+            </div>
+            <div style="clear:both"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- End: Admin Form -->
+  </div>
+</div>

@@ -1,0 +1,73 @@
+<script type="text/javascript" src="site_media/js/views_js/validar_horas_extras.js"></script>
+<div class="admin-form">
+  <div class="panel heading-border panel-info">
+    <div class="panel-body bg-light" style="padding:0px;">
+      <form method="post" id="form-validar-listado-he" name="form-validar-listado-he" class="form-horizontal">
+      <!-- -->
+        <div id="cuerpo_tablas_he2" class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+          <!--Tabla de horas extras -->
+          <div class="" id="spy2">
+            <div class="panel-heading">
+              <div>
+                <i class="fa fa-calendar-plus-o" aria-hidden="true"></i> Validar Horas extras registradas
+              </div>
+            </div>
+            <div class="panel-body pn" id="cuerpo_tabla">
+            </div>
+          </div>
+          <!-- -->
+        </div>
+      <!-- -->
+      </form>
+    </div>
+  </div>
+</div>      
+
+<!--Bloque modal del sistema  para mensajes emergentes-->
+<div class="modal fade" id="modal_mensaje" name="modal_mensaje" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-lg .modal-sm">
+      <div class="modal-content">
+        <div class="modal-header header_conf">
+            <button type="button" id="cerrar_mensaje2" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <p id="cabecera_mensaje" name="cabecera_mensaje"></p>
+        </div>
+        <div class="modal-body" id="cuerpo_mensaje" name="cuerpo_mensaje">
+        <!--Modal body -->
+        <!-- modal body-->
+        </div>  
+        <div class="modal-footer footer_conf">
+            <!-- Footter del modal -->
+              <input type="hidden" class="form-group" maxlength="2" id="id_modal" name="id_modal">
+              <input type="hidden" class="form-group" maxlength="2" id="numero_modal" name="numero_modal">
+              <input type="hidden" class="form-group" maxlength="2" id="mes_modal" name="mes_modal">
+              <input type="hidden" class="form-group" maxlength="2" id="unidad_modal" name="unidad_modal">
+              <button type="button" name="modal_reporte_salir" id="modal_reporte_salir" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+              <button type="button" name="modal_reporte_aceptar" id="modal_reporte_aceptar" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+            <!-- Fin footter del modal -->
+        </div>
+      </div>
+    </div>
+</div>
+<!-- Bloque modal del sistema para formularios --> 
+<div class="modal fade" id="modal_mensaje_validacion" name="modal_mensaje_validacion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-lg .modal-sm">
+      <div class="modal-content">
+        <div class="modal-header header_conf">
+            <button type="button" id="cerrar_mensaje3" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <p id="cabecera_mensaje_val" name="cabecera_mensaje_val">
+              <h3>Consulta horas extras diurnas/nocturnas</h3>
+            </p>
+        </div>
+        <div class="modal-body" id="cuerpo_mensaje_val" name="cuerpo_mensaje_val">
+        <!--Modal body -->
+        <!-- modal body-->
+        </div>  
+        <div class="modal-footer footer_conf">
+            <!-- Footter del modal -->
+              <button type="button" name="modal_reporte_salir" id="modal_reporte_salir" class="btn btn-danger" data-dismiss="modal">Salir</button>
+            <!-- Fin footter del modal -->
+        </div>
+      </div>
+    </div>
+</div>
+<!-- --> 

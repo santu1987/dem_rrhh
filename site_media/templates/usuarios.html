@@ -1,0 +1,79 @@
+<script type="text/javascript" src="site_media/js/views_js/tipo_usuario.js"></script>
+<!-- begin: .tray-center -->
+<div class="tray tray-center animated fadeIn">
+  <div class="mw1000 center-block">
+    <!-- Begin: Content Header -->
+    <div class="content-header">
+    </div>
+    <!-- Begin: Admin Form -->
+    <div class="admin-form">
+      <div class="panel heading-border panel-info">
+        <div class="panel-body bg-light">
+          <form method="post" id="form-ui" class="form-horizontal">
+            <div class="section-divider mb40" id="spy1">
+              <span>Usuarios</span>
+            </div>
+            <div class="row">
+                <div class="form-group col-lg-12">
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Tipo usuario:</div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding0">
+                          <select id="select_tipo_usuario" name="select_tipo_usuario" class="form-control" data-style="btn-fff" data-live-search="true" title="Seleccione tipo de usuario">
+                          </select>
+                        </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Login usuario:</div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding0">
+                           <input type="text" name="text_login" id="text_login" class="form-control" onKeyPress="return valida(event,this,0,50)" onBlur="valida2(this,0,50);" maxlenght="50" placeholder="Ingrese login de usuario">
+                        </div>
+                  </div>
+                </div>
+                <div class="form-group col-lg-12">
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 padding0">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Password:</div>
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                           <input type="password" name="text_pass" id="text_pass" class="form-control" onKeyPress="return valida(event,this,2,8)" onBlur="valida2(this,2,8);" maxlenght="8" placeholder="Ingrese password" >
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 padding0">
+                          <div id="ver_pass" name="ver_pass" class="btn btn-primary" title="Ver password"><i id="ojo_pass" class="fa fa-eye" aria-hidden="true"></i></div>
+                        </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 padding0">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Repita Password:</div>
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                          <input type="password" name="text_pass_rep" id="text_pass_rep" class="form-control" onKeyPress="return valida(event,this,2,8)" onBlur="valida2(this,2,8);" maxlenght="8" placeholder="Repita password">                          
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 padding0">
+                          <div id="ver_pass_rep" name="ver_pass_rep" class="btn btn-primary"><i id="ojo_pass2" class="fa fa-eye" aria-hidden="true"></i></div>
+                        </div>
+                  </div>
+                </div>
+                <div class="">
+                  <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                        <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 padding0">
+                            <div id="bloque_mensaje" name="bloque_mensaje">
+                                <div id="campo_mensaje" name="campo_mensaje"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                           <div id="btn_guardar_us" name="btn_guardar_us" class="btn btn-info " style="float:left;width:100%"><span id="texo_btn_guardar">Guardar</span></div>
+                        </div>
+                        <div class=" col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                          <div id="btn_ver_listado_us" name="" class="btn btn-success" style="float:left;width:100%">Ver listado</div>
+                        </div>
+                        <div class=" col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                          <div id="btn_limpiar" name="btn_limpiar" class="btn btn-danger" style="float:left;width:100%">Limpiar</div>
+                        </div>
+                    </div>
+                    <input type="hidden" name="id_us" id="id_us">
+                </div>
+            </div>            
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- End: Admin Form -->
+  </div>
+</div>
+<!-- end: .tray-center -->
